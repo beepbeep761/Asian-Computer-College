@@ -1,0 +1,1084 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Asian Computer College - Excellence in Education</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'acc-blue': '#004aad',
+            'acc-dark-blue': '#00357a',
+            'acc-yellow': '#ffd500',
+            'acc-light': '#fffbea',
+            'acc-cream': '#fffdd0'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+    
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    
+    .gradient-bg {
+      background: linear-gradient(135deg, #004aad 0%, #00357a 100%);
+    }
+    
+    .hero-pattern {
+      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+    
+    .card-hover {
+      transition: all 0.3s ease;
+    }
+    
+    .card-hover:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    }
+    
+    .fade-in {
+      animation: fadeIn 0.6s ease-in;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .pulse-animation {
+      animation: pulse 2s infinite;
+    }
+    
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+    
+    .typing-animation {
+      overflow: hidden;
+      border-right: 2px solid #ffd500;
+      white-space: nowrap;
+      animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
+    }
+    
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+    
+    @keyframes blink-caret {
+      from, to { border-color: transparent; }
+      50% { border-color: #ffd500; }
+    }
+  </style>
+</head>
+<body class="bg-acc-light">
+  <div class="mb-4">
+  
+
+  <!-- Header with Hero Section -->
+   <div class="mb-4">
+  <header class="bg-acc-blue hero-pattern text-white relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-r from-acc-blue to-acc-yellow"></div>
+    <div class="relative z-10 container mx-auto px-6 py-16 text-center">
+      <div class="mb-8">
+
+        <h1 class="text-5xl md:text-6xl font-bold mb-4 typing-animation text-shadow-lg">Asian Computer College</h1>
+        <p class="text-xl md:text-2xl font-light mb-8 text-shadow">Advancing Knowledge, Cultivating Potentials, Creating Success</p>
+        <div class="flex flex-wrap justify-center gap-4 text-sm md:text-base">
+          <span class="bg-white bg-opacity-20 backdrop-blur-sm px-4 py-2 rounded-full border border-white border-opacity-30">📍 Mayapa, Calamba City, Laguna</span>
+          <span class="bg-white bg-opacity-20 backdrop-blur-sm px-4 py-2 rounded-full border border-white border-opacity-30">📞 Contact Us Today</span>
+          <span class="bg-white bg-opacity-20 backdrop-blur-sm px-4 py-2 rounded-full border border-white border-opacity-30">✨ Since 2000</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navigation -->
+  <nav class="bg-gradient-to-r from-acc-blue via-acc-dark-blue to-acc-blue shadow-2xl sticky top-0 z-50">
+    <div class="container mx-auto px-6">
+      <div class="flex items-center justify-between py-4">
+        <!-- Logo/Brand -->
+    <div class="mb-4">
+  <img src="assets/logo.png" alt="Asian Computer College Logo" class="mx-auto h-20 md:h-20 rounded-full shadow-lg">
+</div>
+
+        <!-- Desktop Menu -->
+        <div class="hidden lg:flex items-center space-x-1">
+          <button onclick="showSection('home')" class="nav-btn group px-4 py-2 text-white hover:bg-acc-yellow hover:text-acc-blue rounded-lg transition-all duration-300 flex items-center space-x-2">
+            <span class="text-lg">🏠</span>
+            <span class="font-medium">Home</span>
+          </button>
+          <button onclick="showSection('about')" class="nav-btn group px-4 py-2 text-white hover:bg-acc-yellow hover:text-acc-blue rounded-lg transition-all duration-300 flex items-center space-x-2">
+            <span class="text-lg">🎯</span>
+            <span class="font-medium">About</span>
+          </button>
+          <button onclick="showSection('programs')" class="nav-btn group px-4 py-2 text-white hover:bg-acc-yellow hover:text-acc-blue rounded-lg transition-all duration-300 flex items-center space-x-2">
+            <span class="text-lg">📚</span>
+            <span class="font-medium">Programs</span>
+          </button>
+          <button onclick="showSection('admission')" class="nav-btn group px-4 py-2 text-white hover:bg-acc-yellow hover:text-acc-blue rounded-lg transition-all duration-300 flex items-center space-x-2">
+            <span class="text-lg">📝</span>
+            <span class="font-medium">Admission</span>
+          </button>
+          <button onclick="showSection('facilities')" class="nav-btn group px-4 py-2 text-white hover:bg-acc-yellow hover:text-acc-blue rounded-lg transition-all duration-300 flex items-center space-x-2">
+            <span class="text-lg">🏢</span>
+            <span class="font-medium">Facilities</span>
+          </button>
+          <button onclick="showSection('contact')" class="nav-btn group px-4 py-2 text-white hover:bg-acc-yellow hover:text-acc-blue rounded-lg transition-all duration-300 flex items-center space-x-2">
+            <span class="text-lg">📞</span>
+            <span class="font-medium">Contact</span>
+          </button>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <div class="lg:hidden relative">
+          <button onclick="toggleMobileMenu()" class="mobile-menu-btn bg-white bg-opacity-10 backdrop-blur-sm text-white px-4 py-2 rounded-lg font-semibold hover:bg-acc-yellow hover:text-acc-blue transition-all duration-300 flex items-center space-x-2 border border-white border-opacity-20">
+            <span class="text-lg">📱</span>
+            <span class="font-medium">Menu</span>
+            <span class="menu-arrow text-sm transition-transform duration-300">▼</span>
+          </button>
+          
+          <!-- Mobile Dropdown Menu -->
+          <div id="mobile-menu" class="mobile-menu absolute right-0 top-full mt-2 w-64 bg-white rounded-xl shadow-2xl border border-gray-200 overflow-hidden transform scale-95 opacity-0 transition-all duration-300 origin-top-right">
+            <div class="py-2">
+              <button onclick="showSection('home'); closeMobileMenu()" class="nav-btn-mobile w-full text-left px-4 py-3 text-acc-blue hover:bg-acc-light transition-all duration-200 flex items-center space-x-3 border-b border-gray-100">
+                <span class="text-xl">🏠</span>
+                <span class="font-medium">Home</span>
+              </button>
+              <button onclick="showSection('about'); closeMobileMenu()" class="nav-btn-mobile w-full text-left px-4 py-3 text-acc-blue hover:bg-acc-light transition-all duration-200 flex items-center space-x-3 border-b border-gray-100">
+                <span class="text-xl">🎯</span>
+                <span class="font-medium">About Us</span>
+              </button>
+              <button onclick="showSection('programs'); closeMobileMenu()" class="nav-btn-mobile w-full text-left px-4 py-3 text-acc-blue hover:bg-acc-light transition-all duration-200 flex items-center space-x-3 border-b border-gray-100">
+                <span class="text-xl">📚</span>
+                <span class="font-medium">Programs</span>
+              </button>
+              <button onclick="showSection('admission'); closeMobileMenu()" class="nav-btn-mobile w-full text-left px-4 py-3 text-acc-blue hover:bg-acc-light transition-all duration-200 flex items-center space-x-3 border-b border-gray-100">
+                <span class="text-xl">📝</span>
+                <span class="font-medium">Admission</span>
+              </button>
+              <button onclick="showSection('facilities'); closeMobileMenu()" class="nav-btn-mobile w-full text-left px-4 py-3 text-acc-blue hover:bg-acc-light transition-all duration-200 flex items-center space-x-3 border-b border-gray-100">
+                <span class="text-xl">🏢</span>
+                <span class="font-medium">Facilities</span>
+              </button>
+              <button onclick="showSection('contact'); closeMobileMenu()" class="nav-btn-mobile w-full text-left px-4 py-3 text-acc-blue hover:bg-acc-light transition-all duration-200 flex items-center space-x-3">
+                <span class="text-xl">📞</span>
+                <span class="font-medium">Contact Us</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content Container -->
+  <main class="container mx-auto px-6 py-8">
+    <div class="mb-4">
+
+    <!-- Home Section -->
+    <section id="home" class="section-content active fade-in">
+      <div class="mb-4">
+      <div class="grid md:grid-cols-2 gap-12 items-center mb-16">
+        <div>
+          <h2 class="text-4xl font-bold text-acc-blue mb-6">Welcome to ACC</h2>
+          <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+            Asian Computer College (ACC) is a premier non-sectarian private institution located in the heart of Mayapa, Calamba City, Laguna. Our state-of-the-art campus provides a safe, nurturing, and technologically advanced environment where students flourish academically, develop leadership skills, and master cutting-edge technology.
+          </p>
+          <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+            We believe in nurturing not just brilliant minds, but also strong character. At ACC, every learner is empowered to dream big, think critically, and become a positive changemaker in our rapidly evolving digital world.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <button onclick="showSection('programs')" class="bg-acc-yellow text-acc-blue px-8 py-3 rounded-full font-semibold hover:bg-yellow-400 transition-all duration-300 transform hover:scale-105 shadow-lg">
+              Explore Programs 🚀
+            </button>
+            <button onclick="showSection('admission')" class="bg-acc-blue text-white px-8 py-3 rounded-full font-semibold hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg">
+              Enroll Now 📝
+            </button>
+          </div>
+        </div>
+        <div class="text-center">
+          <div class="bg-white rounded-3xl p-8 shadow-2xl card-hover">
+            <div class="text-6xl mb-4 pulse-animation">🌟</div>
+            <h3 class="text-2xl font-bold text-acc-blue mb-4">Your Future Starts Here</h3>
+            <div class="grid grid-cols-2 gap-4 text-center">
+              <div class="bg-acc-light p-4 rounded-xl">
+                <div class="text-3xl font-bold text-acc-blue">23+</div>
+                <div class="text-sm text-gray-600">Years of Excellence</div>
+              </div>
+
+              <div class="bg-acc-light p-4 rounded-xl">
+                <div class="text-3xl font-bold text-acc-blue">100%</div>
+                <div class="text-sm text-gray-600">Commitment</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Stats -->
+      <div class="grid md:grid-cols-4 gap-6 mb-16">
+        <div class="bg-white p-6 rounded-2xl shadow-lg text-center card-hover">
+          <div class="text-4xl mb-3">🎯</div>
+          <h3 class="font-bold text-acc-blue mb-2">Mission-Driven</h3>
+          <p class="text-sm text-gray-600">Innovative programs that enhance critical thinking</p>
+        </div>
+        <div class="bg-white p-6 rounded-2xl shadow-lg text-center card-hover">
+          <div class="text-4xl mb-3">💻</div>
+          <h3 class="font-bold text-acc-blue mb-2">Tech-Forward</h3>
+          <p class="text-sm text-gray-600">Cutting-edge computer literacy programs</p>
+        </div>
+        <div class="bg-white p-6 rounded-2xl shadow-lg text-center card-hover">
+          <div class="text-4xl mb-3">🌟</div>
+          <h3 class="font-bold text-acc-blue mb-2">Values-Based</h3>
+          <p class="text-sm text-gray-600">Character formation and moral development</p>
+        </div>
+        <div class="bg-white p-6 rounded-2xl shadow-lg text-center card-hover">
+          <div class="text-4xl mb-3">🌍</div>
+          <h3 class="font-bold text-acc-blue mb-2">Global Ready</h3>
+          <p class="text-sm text-gray-600">Preparing students for worldwide opportunities</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section-content">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold text-acc-blue mb-6">Our Mission & Vision</h2>
+          <div class="w-24 h-1 bg-acc-yellow mx-auto mb-8"></div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8 mb-12">
+          <div class="bg-white p-8 rounded-2xl shadow-lg card-hover">
+            <div class="text-5xl mb-4">🎯</div>
+            <h3 class="text-2xl font-bold text-acc-blue mb-4">Our Mission</h3>
+            <p class="text-gray-700 leading-relaxed">
+              To advance knowledge, cultivate potentials and create success through outcomes-based education anchored on local and global standards.
+            </p>
+          </div>
+          <div class="bg-white p-8 rounded-2xl shadow-lg card-hover">
+            <div class="text-5xl mb-4">🌟</div>
+            <h3 class="text-2xl font-bold text-acc-blue mb-4">Our Vision</h3>
+            <p class="text-gray-700 leading-relaxed">
+              Asian Computer College and ACC Institute endeavor to become exemplars of excellence in standards-based and outcome-based education in the City of Calamba, Laguna that develop and train a new breed of individuals who are globally competitive and holistically prepared to take on the challenges of the 21st century.
+            </p>
+          </div>
+        </div>
+
+        <div class="bg-gradient-to-r from-acc-blue to-acc-dark-blue text-white p-8 rounded-2xl shadow-lg">
+          <div class="text-center mb-6">
+            <h3 class="text-2xl font-bold mb-4">Our Rich History</h3>
+            <div class="text-6xl mb-4">📚</div>
+          </div>
+          <p class="text-lg leading-relaxed text-center">
+            Founded in 2000, Asian Computer College has been at the forefront of educational innovation for over two decades. We continue to evolve and grow, developing programs specifically designed for the digital generation while maintaining our commitment to traditional values and academic excellence.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section id="programs" class="section-content">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold text-acc-blue mb-6">Academic Programs</h2>
+        <div class="w-24 h-1 bg-acc-yellow mx-auto mb-8"></div>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Comprehensive educational pathways designed to nurture young minds from early childhood through senior high school
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+        <!-- Pre-Elementary -->
+        <div class="bg-white p-8 rounded-2xl shadow-lg card-hover">
+          <div class="text-5xl mb-4">🌱</div>
+          <h3 class="text-xl font-bold text-acc-blue mb-4">Pre-Elementary</h3>
+          <ul class="space-y-2 text-gray-700">
+
+            <li class="flex items-center"><span class="text-acc-yellow mr-2">•</span> Kindergarten</li>
+            <li class="flex items-center"><span class="text-acc-yellow mr-2">•</span> Preparatory Level</li>
+          </ul>
+          <div class="mt-4 p-3 bg-acc-light rounded-lg">
+            <p class="text-sm text-gray-600">Building strong foundations for lifelong learning</p>
+          </div>
+        </div>
+
+        <!-- Elementary & Junior High -->
+        <div class="bg-white p-8 rounded-2xl shadow-lg card-hover">
+          <div class="text-5xl mb-4">📖</div>
+          <h3 class="text-xl font-bold text-acc-blue mb-4">Elementary & Junior High</h3>
+          <ul class="space-y-2 text-gray-700">
+            <li class="flex items-center"><span class="text-acc-yellow mr-2">•</span> Grade 1 to Grade 6</li>
+            <li class="flex items-center"><span class="text-acc-yellow mr-2">•</span> Grade 7 to Grade 10</li>
+
+          </ul>
+          <div class="mt-4 p-3 bg-acc-light rounded-lg">
+            <p class="text-sm text-gray-600">Comprehensive academic and character development</p>
+          </div>
+        </div>
+
+        <!-- Senior High School -->
+        <div class="bg-white p-8 rounded-2xl shadow-lg card-hover md:col-span-2 lg:col-span-1">
+          <div class="text-5xl mb-4">🎓</div>
+          <h3 class="text-xl font-bold text-acc-blue mb-4">Senior High School</h3>
+          <div class="space-y-3">
+            <div class="p-3 bg-green-50 rounded-lg">
+              <h4 class="font-semibold text-acc-blue">ABM Track</h4>
+              <p class="text-sm text-gray-600">Accountancy, Business, Management</p>
+            </div>
+            <div class="p-3 bg-purple-50 rounded-lg">
+              <h4 class="font-semibold text-acc-blue">HUMSS Track</h4>
+              <p class="text-sm text-gray-600">Humanities and Social Sciences</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modern Learning Programs -->
+      <div class="bg-gradient-to-r from-acc-blue to-acc-dark-blue text-white p-8 rounded-2xl shadow-lg mb-12">
+        <div class="text-center mb-8">
+          <h3 class="text-3xl font-bold mb-4">Modern Learning Programs</h3>
+          <div class="text-5xl mb-4">🚀</div>
+          <p class="text-lg">Innovative programs designed for 21st-century learning</p>
+        </div>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- F2F/Hybrid Learning -->
+          <div class="bg-white bg-opacity-10 p-6 rounded-xl">
+            <div class="text-3xl mb-3">🏫</div>
+            <h4 class="text-xl font-bold mb-3">Flexible Learning</h4>
+            <p class="text-sm opacity-90 mb-2">F2F classes but ready for distance / hybrid learning anytime</p>
+          </div>
+
+          <!-- G Suite -->
+          <div class="bg-white bg-opacity-10 p-6 rounded-xl">
+            <div class="text-3xl mb-3">📧</div>
+            <h4 class="text-xl font-bold mb-3">G Suite for Education</h4>
+            <p class="text-sm opacity-90">Personal ASIANOS email with unlimited storage and access to G Suite tools plus premium CANVA account</p>
+          </div>
+
+          <!-- Leadership Programs -->
+          <div class="bg-white bg-opacity-10 p-6 rounded-xl">
+            <div class="text-3xl mb-3">🌟</div>
+            <h4 class="text-xl font-bold mb-3">START LEADERSHIP</h4>
+            <p class="text-sm opacity-90">The UMBRELLA PROJECT - Strong Start Leadership Program to help students start positively, address mental health, and develop leadership skills</p>
+          </div>
+
+          <!-- 21st Century Skills -->
+          <div class="bg-white bg-opacity-10 p-6 rounded-xl">
+            <div class="text-3xl mb-3">🧠</div>
+            <h4 class="text-xl font-bold mb-3">21st Century Skills</h4>
+            <p class="text-sm opacity-90">Opportunities to develop critical thinking, collaboration, communication and creativity skills (Genius Hour, Webinars & other programs)</p>
+          </div>
+
+          <!-- Quipper -->
+          <div class="bg-white bg-opacity-10 p-6 rounded-xl">
+            <div class="text-3xl mb-3">💻</div>
+            <h4 class="text-xl font-bold mb-3">Quipper Platform</h4>
+            <p class="text-sm opacity-90">Innovative online learning platform with interactive content, personalized learning paths, and real-time feedback for engaging education</p>
+          </div>
+
+          <!-- Scholastic Program -->
+          <div class="bg-white bg-opacity-10 p-6 rounded-xl">
+            <div class="text-3xl mb-3">📚</div>
+            <h4 class="text-xl font-bold mb-3">Scholastic PR1ME English</h4>
+            <p class="text-sm opacity-90">Designed to improve comprehension skills and develop love for reading among students</p>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Admission Section -->
+    <section id="admission" class="section-content">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold text-acc-blue mb-6">Admission & Core Values</h2>
+          <div class="w-24 h-1 bg-acc-yellow mx-auto mb-8"></div>
+        </div>
+
+        <!-- Admission Process -->
+        <div class="bg-white p-8 rounded-2xl shadow-lg mb-12 card-hover">
+          <div class="text-center mb-6">
+            <div class="text-5xl mb-4">📝</div>
+            <h3 class="text-2xl font-bold text-acc-blue mb-4">Enrollment Now Open!</h3>
+          </div>
+
+        </div>
+
+        <!-- School Fees -->
+        <div class="bg-white p-8 rounded-2xl shadow-lg mb-12 card-hover">
+          <div class="text-center mb-6">
+            <div class="text-5xl mb-4">💰</div>
+            <h3 class="text-2xl font-bold text-acc-blue mb-4">School Fees for S.Y. 2025–2026</h3>
+          </div>
+          
+          <div class="overflow-x-auto">
+            <table class="w-full border-collapse text-sm">
+              <thead>
+                <tr class="bg-acc-light">
+                  <th class="border border-gray-300 p-3 text-acc-blue font-semibold">Level</th>
+                  <th class="border border-gray-300 p-3 text-acc-blue font-semibold">Tuition Fee</th>
+                  <th class="border border-gray-300 p-3 text-acc-blue font-semibold">Misc. Fee</th>
+                  <th class="border border-gray-300 p-3 text-acc-blue font-semibold">Total</th>
+                  <th class="border border-gray-300 p-3 text-acc-blue font-semibold">Scheme 1<br>(10k DP)</th>
+                  <th class="border border-gray-300 p-3 text-acc-blue font-semibold">Scheme 2<br>(7.5k DP)</th>
+                  <th class="border border-gray-300 p-3 text-acc-blue font-semibold">Scheme 3<br>(5.5k DP)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="hover:bg-gray-50">
+                  <td class="border border-gray-300 p-3 font-medium">Preschool</td>
+                  <td class="border border-gray-300 p-3">₱8,500</td>
+                  <td class="border border-gray-300 p-3">₱11,000</td>
+                  <td class="border border-gray-300 p-3 font-semibold text-acc-blue">₱19,500</td>
+                  <td class="border border-gray-300 p-3">₱1,000</td>
+                  <td class="border border-gray-300 p-3">₱1,250</td>
+                  <td class="border border-gray-300 p-3">₱2,250</td>
+                </tr>
+                <tr class="hover:bg-gray-50">
+                  <td class="border border-gray-300 p-3 font-medium">Grades 1–3</td>
+                  <td class="border border-gray-300 p-3">₱10,500</td>
+                  <td class="border border-gray-300 p-3">₱14,500</td>
+                  <td class="border border-gray-300 p-3 font-semibold text-acc-blue">₱25,000</td>
+                  <td class="border border-gray-300 p-3">₱1,550</td>
+                  <td class="border border-gray-300 p-3">₱1,800</td>
+                  <td class="border border-gray-300 p-3">₱2,350</td>
+                </tr>
+                <tr class="hover:bg-gray-50">
+                  <td class="border border-gray-300 p-3 font-medium">Grades 4–6</td>
+                  <td class="border border-gray-300 p-3">₱10,500</td>
+                  <td class="border border-gray-300 p-3">₱15,500</td>
+                  <td class="border border-gray-300 p-3 font-semibold text-acc-blue">₱26,000</td>
+                  <td class="border border-gray-300 p-3">₱1,650</td>
+                  <td class="border border-gray-300 p-3">₱1,900</td>
+                  <td class="border border-gray-300 p-3">₱2,450</td>
+                </tr>
+                <tr class="hover:bg-gray-50">
+                  <td class="border border-gray-300 p-3 font-medium">Grades 7–8</td>
+                  <td class="border border-gray-300 p-3">₱12,000</td>
+                  <td class="border border-gray-300 p-3">₱15,500</td>
+                  <td class="border border-gray-300 p-3 font-semibold text-acc-blue">₱27,500</td>
+                  <td class="border border-gray-300 p-3">₱1,800<br><span class="text-green-600 text-xs">(₱900 w/ ESC)</span></td>
+                  <td class="border border-gray-300 p-3">₱2,050<br><span class="text-green-600 text-xs">(₱1,150 w/ ESC)</span></td>
+                  <td class="border border-gray-300 p-3">₱2,250<br><span class="text-green-600 text-xs">(₱1,350 w/ ESC)</span></td>
+                </tr>
+                <tr class="hover:bg-gray-50">
+                  <td class="border border-gray-300 p-3 font-medium">Grades 9–10</td>
+                  <td class="border border-gray-300 p-3">₱13,000</td>
+                  <td class="border border-gray-300 p-3">₱15,500</td>
+                  <td class="border border-gray-300 p-3 font-semibold text-acc-blue">₱28,500</td>
+                  <td class="border border-gray-300 p-3">₱1,900<br><span class="text-green-600 text-xs">(₱1,000 w/ ESC)</span></td>
+                  <td class="border border-gray-300 p-3">₱2,150<br><span class="text-green-600 text-xs">(₱1,250 w/ ESC)</span></td>
+                  <td class="border border-gray-300 p-3">₱2,350<br><span class="text-green-600 text-xs">(₱1,450 w/ ESC)</span></td>
+                </tr>
+                <tr class="hover:bg-gray-50">
+                  <td class="border border-gray-300 p-3 font-medium">Grades 11–12</td>
+                  <td class="border border-gray-300 p-3">₱13,000<br><span class="text-xs">(or ₱9,500)</span></td>
+                  <td class="border border-gray-300 p-3">₱9,500</td>
+                  <td class="border border-gray-300 p-3 font-semibold text-acc-blue">₱22,500</td>
+                  <td class="border border-gray-300 p-3">₱450<br><span class="text-xs">(₱3,000 DP, ₱2,000 DP)</span></td>
+                  <td class="border border-gray-300 p-3 text-green-600 font-medium" colspan="2">Monthly Fee is FREE for Public School Completers</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          
+          <div class="mt-6 p-4 bg-yellow-50 border-l-4 border-acc-yellow rounded-r-lg">
+            <p class="text-sm text-gray-700">
+              <strong class="text-acc-blue">Note:</strong> School fees do not include school uniforms, books/learning materials, educational field trips, and graduation fees.
+            </p>
+          </div>
+        </div>
+
+        <!-- Admission Requirements -->
+        <div class="bg-white p-8 rounded-2xl shadow-lg mb-12 card-hover">
+          <div class="text-center mb-6">
+            <div class="text-5xl mb-4">📋</div>
+            <h3 class="text-2xl font-bold text-acc-blue mb-4">Admission Requirements</h3>
+          </div>
+          
+          <div class="grid md:grid-cols-2 gap-8">
+            <!-- For New Students -->
+            <div class="bg-acc-light p-6 rounded-xl">
+              <h4 class="text-xl font-semibold text-acc-blue mb-4">📚 For New Students</h4>
+              <ul class="space-y-3 text-gray-700">
+                <li class="flex items-start">
+                  <span class="text-acc-yellow mr-3 mt-1">•</span>
+                  <span>Form 137</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-acc-yellow mr-3 mt-1">•</span>
+                  <span>Form 138</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-acc-yellow mr-3 mt-1">•</span>
+                  <span>Birth Certificate</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-acc-yellow mr-3 mt-1">•</span>
+                  <span>Good Moral Certificate</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-acc-yellow mr-3 mt-1">•</span>
+                  <span>Birth Certificate (PSA Authenticated)</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-acc-yellow mr-3 mt-1">•</span>
+                  <span>3 Copies of 1x1 ID Picture</span>
+                </li>
+              </ul>
+            </div>
+
+            <!-- For Transferees -->
+            <div class="bg-blue-50 p-6 rounded-xl">
+              <h4 class="text-xl font-semibold text-acc-blue mb-4">🔄 For Transferees</h4>
+              <ul class="space-y-3 text-gray-700">
+                <li class="flex items-start">
+                  <span class="text-acc-yellow mr-3 mt-1">•</span>
+                  <span>All requirements for new students</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-acc-yellow mr-3 mt-1">•</span>
+                  <span>Transfer Credentials/Honorable Dismissal</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-acc-yellow mr-3 mt-1">•</span>
+                  <span>Certificate of Enrollment from previous school</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-acc-yellow mr-3 mt-1">•</span>
+                  <span>Transcript of Records (if applicable)</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="mt-8 p-6 bg-gradient-to-r from-acc-yellow to-yellow-400 rounded-xl">
+            <div class="text-center">
+              <h4 class="text-xl font-bold text-acc-blue mb-3">💡 Important Notes</h4>
+              <div class="grid md:grid-cols-2 gap-4 text-sm text-acc-blue">
+                <div class="flex items-center justify-center">
+                  <span class="mr-2">📅</span>
+                  <span>Submit requirements during enrollment period</span>
+                </div>
+                <div class="flex items-center justify-center">
+                  <span class="mr-2">✅</span>
+                  <span>All documents must be complete and authentic</span>
+                </div>
+                <div class="flex items-center justify-center">
+                  <span class="mr-2">📞</span>
+                  <span>Contact us for any clarifications</span>
+                </div>
+                <div class="flex items-center justify-center">
+                  <span class="mr-2">🏫</span>
+                  <span>Visit our campus for assistance</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Core Values -->
+        <div class="bg-gradient-to-r from-acc-blue to-acc-dark-blue text-white p-8 rounded-2xl shadow-lg">
+          <div class="text-center mb-8">
+            <h3 class="text-3xl font-bold mb-4">Core Values: A.S.I.A.N.O.S.</h3>
+            <div class="text-5xl mb-4">🌟</div>
+            <p class="text-lg">We shape students who embody these essential qualities:</p>
+          </div>
+          
+          <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="bg-white bg-opacity-10 p-6 rounded-xl text-center">
+              <div class="text-3xl mb-3">🔄</div>
+              <h4 class="text-xl font-bold mb-2">Adaptable</h4>
+              <p class="text-sm opacity-90">Flexible and resilient in facing challenges</p>
+            </div>
+            <div class="bg-white bg-opacity-10 p-6 rounded-xl text-center">
+              <div class="text-3xl mb-3">💪</div>
+              <h4 class="text-xl font-bold mb-2">Self-confident</h4>
+              <p class="text-sm opacity-90">Believing in their abilities and potential</p>
+            </div>
+            <div class="bg-white bg-opacity-10 p-6 rounded-xl text-center">
+              <div class="text-3xl mb-3">🎯</div>
+              <h4 class="text-xl font-bold mb-2">Independent</h4>
+              <p class="text-sm opacity-90">Self-reliant and responsible decision-makers</p>
+            </div>
+            <div class="bg-white bg-opacity-10 p-6 rounded-xl text-center">
+              <div class="text-3xl mb-3">⭐</div>
+              <h4 class="text-xl font-bold mb-2">Admirable</h4>
+              <p class="text-sm opacity-90">Worthy of respect and emulation</p>
+            </div>
+            <div class="bg-white bg-opacity-10 p-6 rounded-xl text-center">
+              <div class="text-3xl mb-3">😊</div>
+              <h4 class="text-xl font-bold mb-2">Nice</h4>
+              <p class="text-sm opacity-90">Kind, considerate, and compassionate</p>
+            </div>
+            <div class="bg-white bg-opacity-10 p-6 rounded-xl text-center">
+              <div class="text-3xl mb-3">🙏</div>
+              <h4 class="text-xl font-bold mb-2">Obedient</h4>
+              <p class="text-sm opacity-90">Respectful of authority and rules</p>
+            </div>
+            <div class="bg-white bg-opacity-10 p-6 rounded-xl text-center">
+              <div class="text-3xl mb-3">🧠</div>
+              <h4 class="text-xl font-bold mb-2">Smart</h4>
+              <p class="text-sm opacity-90">Intellectually curious and academically excellent</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Facilities Section -->
+    <section id="facilities" class="section-content">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold text-acc-blue mb-6">World-Class Facilities</h2>
+        <div class="w-24 h-1 bg-acc-yellow mx-auto mb-8"></div>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          State-of-the-art facilities designed to enhance learning and provide the best educational experience
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-white p-8 rounded-2xl shadow-lg card-hover">
+          <div class="text-5xl mb-4">💻</div>
+          <h3 class="text-xl font-bold text-acc-blue mb-4">Computer Laboratory</h3>
+          <p class="text-gray-700">Modern computer lab equipped with the latest technology and high-speed internet connectivity.</p>
+        </div>
+
+        <div class="bg-white p-8 rounded-2xl shadow-lg card-hover">
+          <div class="text-5xl mb-4">🔬</div>
+          <h3 class="text-xl font-bold text-acc-blue mb-4">Science Laboratory</h3>
+          <p class="text-gray-700">Science lab for hands-on experiments and research activities.</p>
+        </div>
+
+        <div class="bg-white p-8 rounded-2xl shadow-lg card-hover">
+          <div class="text-5xl mb-4">📚</div>
+          <h3 class="text-xl font-bold text-acc-blue mb-4">Library & Media Center</h3>
+          <p class="text-gray-700">Comprehensive library with digital resources and quiet study areas.</p>
+        </div>
+
+        <div class="bg-white p-8 rounded-2xl shadow-lg card-hover">
+          <div class="text-5xl mb-4">🏃</div>
+          <h3 class="text-xl font-bold text-acc-blue mb-4">Sports Facilities</h3>
+          <p class="text-gray-700">Sports facilities for physical education and recreational activities.</p>
+        </div>
+
+
+
+        <div class="bg-white p-8 rounded-2xl shadow-lg card-hover">
+          <div class="text-5xl mb-4">🍽️</div>
+          <h3 class="text-xl font-bold text-acc-blue mb-4">Cafeteria</h3>
+          <p class="text-gray-700">Clean and spacious cafeteria serving nutritious meals and snacks.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-content">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold text-acc-blue mb-6">Get In Touch</h2>
+          <div class="w-24 h-1 bg-acc-yellow mx-auto mb-8"></div>
+          <p class="text-xl text-gray-600">Ready to join the ACC family? We'd love to hear from you!</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8 mb-12">
+          <!-- Contact Information -->
+          <div class="bg-white p-8 rounded-2xl shadow-lg">
+            <h3 class="text-2xl font-bold text-acc-blue mb-6">Contact Information</h3>
+            <div class="space-y-6">
+              <div class="flex items-start space-x-4">
+                <div class="text-2xl">📍</div>
+                <div>
+                  <h4 class="font-semibold text-acc-blue">Address</h4>
+                  <p class="text-gray-700">Mayapa, Calamba City, Laguna, Philippines</p>
+                </div>
+              </div>
+              <div class="flex items-start space-x-4">
+                <div class="text-2xl">📞</div>
+                <div>
+                  <h4 class="font-semibold text-acc-blue">Phone</h4>
+                  <p class="text-gray-700">+49 5035 377</p>
+                </div>
+              </div>
+              <div class="flex items-start space-x-4">
+                <div class="text-2xl">✉️</div>
+                <div>
+                  <h4 class="font-semibold text-acc-blue">Email</h4>
+                  <p class="text-gray-700">administrator@asianos.edu.ph</p>
+                </div>
+              </div>
+              <div class="flex items-start space-x-4">
+                <div class="text-2xl">🕒</div>
+                <div>
+                  <h4 class="font-semibold text-acc-blue">Office Hours</h4>
+                  <p class="text-gray-700">Monday - Friday: 8:00 AM - 5:00 PM</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="bg-white p-8 rounded-2xl shadow-lg">
+            <h3 class="text-2xl font-bold text-acc-blue mb-6">Send us a Message</h3>
+            <form class="space-y-4" onsubmit="handleFormSubmit(event)">
+              <div>
+                <label class="block text-sm font-semibold text-gray-700 mb-2">Full Name</label>
+                <input type="text" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-acc-blue focus:border-transparent">
+              </div>
+              <div>
+                <label class="block text-sm font-semibold text-gray-700 mb-2">Email Address</label>
+                <input type="email" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-acc-blue focus:border-transparent">
+              </div>
+              <div>
+                <label class="block text-sm font-semibold text-gray-700 mb-2">Phone Number</label>
+                <input type="tel" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-acc-blue focus:border-transparent">
+              </div>
+              <div>
+                <label class="block text-sm font-semibold text-gray-700 mb-2">Inquiry Type</label>
+                <select class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-acc-blue focus:border-transparent">
+                  <option>General Information</option>
+                  <option>Admission Inquiry</option>
+                  <option>Program Details</option>
+                  <option>Schedule a Visit</option>
+                </select>
+              </div>
+              <div>
+                <label class="block text-sm font-semibold text-gray-700 mb-2">Message</label>
+                <textarea rows="4" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-acc-blue focus:border-transparent"></textarea>
+              </div>
+              <button type="submit" class="w-full bg-acc-yellow text-acc-blue py-3 rounded-lg font-bold hover:bg-yellow-400 transition-all duration-300 transform hover:scale-105 shadow-lg">
+                Send Message 📧
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Map Placeholder -->
+        <div class="bg-white p-8 rounded-2xl shadow-lg text-center">
+          <h3 class="text-2xl font-bold text-acc-blue mb-6">Visit Our Campus</h3>
+          <div class="bg-gray-100 h-64 rounded-xl flex items-center justify-center">
+            <div class="text-center">
+              <div class="text-6xl mb-4">🗺️</div>
+              <p class="text-gray-600">Interactive campus map coming soon!</p>
+              <p class="text-sm text-gray-500 mt-2">Located in the heart of Mayapa, Calamba City, Laguna</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-acc-blue text-white py-12">
+    <div class="container mx-auto px-6">
+      <div class="grid md:grid-cols-4 gap-8 mb-8">
+        <div>
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mr-3">
+              <div class="text-2xl">🏫</div>
+            </div>
+            <h3 class="text-xl font-bold">Asian Computer College</h3>
+          </div>
+          <p class="text-gray-300 text-sm leading-relaxed">
+            Advancing Knowledge, Cultivating Potentials, Creating Success since 2000.
+          </p>
+        </div>
+        <div>
+          <h4 class="font-bold mb-4">Quick Links</h4>
+          <ul class="space-y-2 text-sm">
+            <li><button onclick="showSection('about')" class="text-gray-300 hover:text-acc-yellow transition-colors">About Us</button></li>
+            <li><button onclick="showSection('programs')" class="text-gray-300 hover:text-acc-yellow transition-colors">Programs</button></li>
+            <li><button onclick="showSection('admission')" class="text-gray-300 hover:text-acc-yellow transition-colors">Admission</button></li>
+            <li><button onclick="showSection('facilities')" class="text-gray-300 hover:text-acc-yellow transition-colors">Facilities</button></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold mb-4">Programs</h4>
+          <ul class="space-y-2 text-sm text-gray-300">
+            <li>Pre-Elementary</li>
+            <li>Elementary</li>
+            <li>Junior High School</li>
+            <li>Senior High School</li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-bold mb-4">Contact Info</h4>
+          <ul class="space-y-2 text-sm text-gray-300">
+            <li>📍 Mayapa, Calamba City, Laguna</li>
+            <li>📞 +49 5035 377</li>
+            <li>✉️ administrator@asianos.edu.ph</li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-gray-600 pt-8 text-center">
+        <p class="text-gray-300 text-sm">
+          © 2024 Asian Computer College. All rights reserved. | 
+          <span class="text-acc-yellow">Empowering the next generation of digital leaders.</span>
+        </p>
+      </div>
+    </div>
+  </footer>
+  <!-- FOOTER -->
+<footer class="bg-blue-900 text-white py-6">
+  <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
+    <p>&copy; 2025 Asian Computer College. All rights reserved.</p>
+    <div class="flex items-center space-x-4">
+      <nav class="hidden md:flex space-x-4">
+        <a href="#about" class="hover:text-gray-300">About</a>
+        <a href="#programs" class="hover:text-gray-300">Programs</a>
+        <a href="#contact" class="hover:text-gray-300">Contact</a>
+      </nav>
+        <span class="hidden sm:inline">Facebook</span>
+      </a>
+    </div>
+  </div>
+</footer>
+
+  <script>
+    // Sound effects for button clicks
+    function playClickSound() {
+      try {
+        // Create audio context for button click sound
+        const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+        
+        // Create oscillator for a very soft whisper-like click sound
+        const oscillator = audioContext.createOscillator();
+        const gainNode = audioContext.createGain();
+        
+        oscillator.connect(gainNode);
+        gainNode.connect(audioContext.destination);
+        
+        // Configure sound - very soft whisper tone with consistent volume
+        oscillator.type = 'sine';
+        oscillator.frequency.setValueAtTime(600, audioContext.currentTime);
+        oscillator.frequency.exponentialRampToValueAtTime(400, audioContext.currentTime + 0.2);
+        
+        // Fixed consistent volume
+        gainNode.gain.setValueAtTime(0.03, audioContext.currentTime);
+        gainNode.gain.exponentialRampToValueAtTime(0.001, audioContext.currentTime + 0.2);
+        
+        oscillator.start(audioContext.currentTime);
+        oscillator.stop(audioContext.currentTime + 0.2);
+      } catch (error) {
+        // Silently handle audio context errors
+        console.log('Audio not available');
+      }
+    }
+
+    function playSuccessSound() {
+      try {
+        // Create audio context for success sound
+        const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+        
+        // Create a gentle, soft success melody
+        const times = [0, 0.2, 0.4];
+        const frequencies = [440, 523, 659]; // A4, C5, E5 - gentle progression
+        
+        times.forEach((time, index) => {
+          const oscillator = audioContext.createOscillator();
+          const gainNode = audioContext.createGain();
+          
+          oscillator.connect(gainNode);
+          gainNode.connect(audioContext.destination);
+          
+          oscillator.type = 'sine';
+          oscillator.frequency.setValueAtTime(frequencies[index], audioContext.currentTime + time);
+          
+          // Fixed consistent volume for all notes
+          gainNode.gain.setValueAtTime(0.025, audioContext.currentTime + time);
+          gainNode.gain.exponentialRampToValueAtTime(0.001, audioContext.currentTime + time + 0.6);
+          
+          oscillator.start(audioContext.currentTime + time);
+          oscillator.stop(audioContext.currentTime + time + 0.6);
+        });
+      } catch (error) {
+        // Silently handle audio context errors
+        console.log('Audio not available');
+      }
+    }
+
+    // Mobile menu functionality
+    function toggleMobileMenu() {
+      playClickSound();
+      const mobileMenu = document.getElementById('mobile-menu');
+      const menuArrow = document.querySelector('.menu-arrow');
+      
+      if (mobileMenu.classList.contains('opacity-0')) {
+        // Show menu
+        mobileMenu.classList.remove('opacity-0', 'scale-95');
+        mobileMenu.classList.add('opacity-100', 'scale-100');
+        menuArrow.style.transform = 'rotate(180deg)';
+      } else {
+        // Hide menu
+        mobileMenu.classList.remove('opacity-100', 'scale-100');
+        mobileMenu.classList.add('opacity-0', 'scale-95');
+        menuArrow.style.transform = 'rotate(0deg)';
+      }
+    }
+
+    function closeMobileMenu() {
+      const mobileMenu = document.getElementById('mobile-menu');
+      const menuArrow = document.querySelector('.menu-arrow');
+      
+      mobileMenu.classList.remove('opacity-100', 'scale-100');
+      mobileMenu.classList.add('opacity-0', 'scale-95');
+      menuArrow.style.transform = 'rotate(0deg)';
+    }
+
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', function(event) {
+      const mobileMenu = document.getElementById('mobile-menu');
+      const menuButton = document.querySelector('.mobile-menu-btn');
+      
+      if (!mobileMenu.contains(event.target) && !menuButton.contains(event.target)) {
+        closeMobileMenu();
+      }
+    });
+
+    // Navigation functionality
+    function showSection(sectionId) {
+      playClickSound(); // Play sound on navigation
+      // Hide all sections
+      const sections = document.querySelectorAll('.section-content');
+      sections.forEach(section => {
+        section.classList.remove('active');
+        section.style.display = 'none';
+      });
+      
+      // Show selected section with animation
+      const targetSection = document.getElementById(sectionId);
+      if (targetSection) {
+        targetSection.style.display = 'block';
+        setTimeout(() => {
+          targetSection.classList.add('active', 'fade-in');
+        }, 10);
+      }
+      
+      // Update desktop navigation buttons
+      const navButtons = document.querySelectorAll('.nav-btn');
+      navButtons.forEach(btn => {
+        btn.classList.remove('bg-acc-yellow', 'text-acc-blue');
+        btn.classList.add('text-white');
+      });
+      
+      // Update mobile navigation buttons
+      const mobileNavButtons = document.querySelectorAll('.nav-btn-mobile');
+      mobileNavButtons.forEach(btn => {
+        btn.classList.remove('bg-acc-yellow', 'text-white');
+        btn.classList.add('text-acc-blue');
+      });
+      
+      // Highlight active button (desktop)
+      if (event && event.target.classList.contains('nav-btn')) {
+        event.target.classList.remove('text-white');
+        event.target.classList.add('bg-acc-yellow', 'text-acc-blue');
+      }
+      
+      // Highlight active button (mobile)
+      if (event && event.target.classList.contains('nav-btn-mobile')) {
+        event.target.classList.remove('text-acc-blue');
+        event.target.classList.add('bg-acc-yellow', 'text-white');
+      }
+    }
+    
+    // Form submission handler
+    function handleFormSubmit(event) {
+      event.preventDefault();
+      playSuccessSound(); // Play success sound
+      
+      // Show success message
+      const form = event.target;
+      const originalHTML = form.innerHTML;
+      
+      form.innerHTML = `
+        <div class="text-center py-8">
+          <div class="text-6xl mb-4">✅</div>
+          <h3 class="text-2xl font-bold text-acc-blue mb-4">Message Sent Successfully!</h3>
+          <p class="text-gray-700 mb-6">Thank you for your interest in Asian Computer College. We'll get back to you within 24 hours.</p>
+          <button onclick="resetForm(this)" class="bg-acc-yellow text-acc-blue px-6 py-3 rounded-lg font-bold hover:bg-yellow-400 transition-all duration-300">
+            Send Another Message
+          </button>
+        </div>
+      `;
+      
+      // Store original form HTML for reset
+      form.dataset.originalHTML = originalHTML;
+    }
+    
+    // Reset form function
+    function resetForm(button) {
+      playClickSound(); // Play sound on reset
+      const form = button.closest('form');
+      form.innerHTML = form.dataset.originalHTML;
+    }
+    
+    // Initialize page
+    document.addEventListener('DOMContentLoaded', function() {
+      // Show home section by default
+      showSection('home');
+      
+      // Add scroll animations
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      };
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('fade-in');
+          }
+        });
+      }, observerOptions);
+      
+      // Observe all cards for animation
+      document.querySelectorAll('.card-hover').forEach(card => {
+        observer.observe(card);
+      });
+    });
+    
+    // Add some interactive effects
+    document.addEventListener('mousemove', function(e) {
+      const cards = document.querySelectorAll('.card-hover');
+      cards.forEach(card => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        
+        if (x >= 0 && x <= rect.width && y >= 0 && y <= rect.height) {
+          const centerX = rect.width / 2;
+          const centerY = rect.height / 2;
+          const rotateX = (y - centerY) / 10;
+          const rotateY = (centerX - x) / 10;
+          
+          card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateZ(10px)`;
+        } else {
+          card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateZ(0px)';
+        }
+      });
+    });
+  </script>
+
+  <style>
+    .section-content {
+      display: none;
+    }
+    .section-content.active {
+      display: block;
+    }
+  </style>
+
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'96b60b24502ebc57',t:'MTc1NDU2MjA0OS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
+
